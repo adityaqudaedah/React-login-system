@@ -7,8 +7,8 @@ import {
   MenuLinkLogout,
 } from "../Styled/Home.style";
 
-import Card from '../Styled/Card.style';
-import Container from "../Styled/Container.style";
+import Card from "../Styled/Card.style";
+import { HamburgerMenu, SquareBlock } from "../Styled/Home.style";
 
 // import home_doodles from "../../Assets/home_doodles.svg";
 const Home = (props) => {
@@ -23,13 +23,19 @@ const Home = (props) => {
           <MenuLink>Home</MenuLink>
           <MenuLinkLogout onClick={props.onLogout}>Logout</MenuLinkLogout>
         </Menu>
+
+        <HamburgerMenu>
+          <SquareBlock />
+          <SquareBlock />
+          <SquareBlock />
+        </HamburgerMenu>
       </NavBar>
 
-      <Container justify='center'>
+      <>
         <Card>
           <h1>Welcome Back !</h1>
         </Card>
-      </Container>
+      </>
     </React.Fragment>
   );
 };
