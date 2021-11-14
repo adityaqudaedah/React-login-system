@@ -7,7 +7,9 @@ import {
   MenuLinkLogout,
   SideBar,
   SideMenu,
+  HomeDoodles,
 } from "../Styled/Home.style";
+import home_doodles from "../../Assets/home_doodles.svg";
 
 import Card from "../Styled/Card.style";
 import { HamburgerMenu, SquareBlock } from "../Styled/Home.style";
@@ -45,9 +47,10 @@ const Home = (props) => {
         <Card>
           <h1>Welcome Back !</h1>
         </Card>
+        <HomeDoodles src={home_doodles} />
         {toggle && (
           <SideBar>
-            <SideMenu onClick={()=> toggle ? setToggle(!toggle):''}>
+            <SideMenu onClick={() => (toggle ? setToggle(!toggle) : "")}>
               <AiFillHome /> Home
             </SideMenu>
             <SideMenu onClick={props.onLogout}>

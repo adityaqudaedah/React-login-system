@@ -125,3 +125,9 @@ export const SideMenu = styled(MenuLinkLogout)`
   border-radius: 0px;
   width: inherit;
 `;
+
+export const HomeDoodles = styled.img`
+  display : block;
+  margin : auto ;
+  width: 30rem;
+`;

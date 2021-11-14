@@ -116,7 +116,7 @@ const Login = (props) => {
             bg="black"
             color="white"
             margin="2rem 0"
-            padding="0.5rem"
+            padding="0.7rem"
             border="1px solid black"
             radius="4px"
             justify="center"
