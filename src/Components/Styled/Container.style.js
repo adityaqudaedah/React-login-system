@@ -11,10 +11,12 @@ const Container = styled.div`
   padding: ${(props) => props.padding};
   border: ${(props) => props.border};
   border-radius: ${(props) => props.radius};
-  
+  position: ${(props) => props.position};
 
   @media only screen and (max-width: 812px) {
-    ${(props) => props.id && `flex-direction : column-reverse
+    ${(props) =>
+      props.id &&
+      `flex-direction : column-reverse
     `}
   }
 `;

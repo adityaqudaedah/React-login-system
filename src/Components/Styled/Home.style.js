@@ -6,6 +6,8 @@ export const NavBar = styled.div`
   justify-content: space-between;
   padding: 0.5rem 0;
   box-shadow: 0px 0px 10px 1px #888888;
+  /* background-color: rgba(255, 255, 255, .15);
+  backdrop-filter:blur(15px); */
   width: 100vw;
 `;
 
@@ -27,7 +29,6 @@ export const Banner = styled.div`
   }
 `;
 export const HamburgerMenu = styled.div`
-
   display: none;
 
   @media only screen and (max-width: 578px) {
@@ -90,4 +91,37 @@ export const MenuLinkLogout = styled(MenuLink)`
   &:hover {
     animation: ${logoutAnimation} 0.3s ease-in forwards;
   }
+`;
+
+const sideBarAnimation = keyframes`
+  from{
+    margin-right:-50%;
+  }
+  to{
+    margin-right : 0%;
+  }
+`;
+export const SideBar = styled.ul`
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  font-size: 1.3em;
+  padding: 8rem 0;
+  height: 100vh;
+  backdrop-filter: blur(5px);
+  background-color: rgba(31, 29, 29, 0.15);
+  width: 13rem;
+  /* margin-right:-50%; */
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 10;
+  animation: ${sideBarAnimation} 0.5s ease-in-out forwards;
+`;
+
+export const SideMenu = styled(MenuLinkLogout)`
+  /* background-color : black; */
+  border: none;
+  border-radius: 0px;
+  width: inherit;
 `;
